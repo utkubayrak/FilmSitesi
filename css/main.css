@@ -1,0 +1,408 @@
+@import url(./variable.css);
+ * {
+  margin: 0;
+  padding: 0;
+  
+  transition: all 0.5s, color 0s !important ;
+}
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6 { color: var(--white); }
+body {
+  background: var(--light-black) !important;
+  color: var(--off-white) !important;
+  -webkit-font-smoothing: antialiased;
+}
+/*  */
+
+img {
+  display: block; /* Elementlerin kutu şeklinde alan kaplaması */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Verilen yüksekliğe ve genişliğe göre kapla */
+}
+.navbar-brand > img {
+  
+  display: block; /* Elementlerin kutu şeklinde alan kaplaması */
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* Verilen yüksekliğe ve genişliğe göre kapla */
+  
+}
+input, button {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+button {
+  color: var(--off-white);
+  cursor: pointer; /*İmleç üstüne geldiğinde  */
+}
+
+
+a {
+  text-decoration: none !important; 
+  display: block !important;
+  color: var(--off-white) !important;
+}
+html { font-family: var(--ff-inter); }
+::-webkit-scrollbar { /* Kaydırma çubuğu özellikleri */
+  background: transparent;
+  border-left: 1px solid var(--dark-blue);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-azure);
+  border-radius: 5em;
+  border: 3px solid var(--light-black);
+}
+ .main-menu{ 
+  background: var(--dark-black); 
+  margin-bottom: 15px;
+}
+
+.category-heading {
+  font-size: 40px; 
+  font-weight: var(--fw-5);
+  margin-bottom: 60px;
+}
+/* main */
+.navbar-toggler{
+  background-color: var(--light-azure);
+}
+
+ .navbar-menu-btn { display: none; }
+
+.navbar-nav { display: flex; }
+
+.navbar-link {
+  font-size: 14px; /*Home ve category yazısı  */
+  font-weight: var(--fw-5);
+}
+.navbar-login span ,svg , path{
+  transition-property: none !important;
+}
+.nav-item a{
+  transition: all 0.5s !important;
+}
+.nav-item a:hover{
+  transition: all 0.5s !important;
+  color: var(--light-azure) !important;
+}
+ /*home ve category üzerine geldiğinde*/
+ .navbar-search {  /*navbar search */
+  display:     flex;
+  align-items: center;
+}
+.navbar-form {
+  position: relative;
+}
+.navbar-form-search {
+  background: var(--dark-blue);
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 15px;
+  color: var(--off-white);
+  font-size: 14px;
+  font-weight: var(--fw-5);
+}
+.navbar-form-btn {
+  background: var(--dark-blue);
+  position: absolute;
+  top:   calc(50% - 10px);   /* arama butonunu searh'ün üstüne koyma */
+  right: 10px;
+}
+.navbar-form-btn svg {
+  font-size: 20px;
+  color: var(--light-azure);
+  vertical-align: revert;
+}
+
+
+.navbar-form-search::placeholder { color: var(--off-white); }
+/**
+ * navbar-form close button & navbar search button
+ * for small device
+ */
+
+
+
+
+/* Movies */
+.movies { margin-bottom: 60px; }
+/* Movies grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.movie-card {
+  /**
+   * yıldızla puanın gelirkenki büyüklüğü
+   */
+   --scale: 3.0;
+  cursor: pointer;
+}
+.movie-card .card-head {
+  /* Normal konuma göre ayarlama */
+  position: relative; 
+  height: 350px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  overflow: hidden; 
+  /* İçerik sığmazsa taşan kısmı görünmez yap */
+}
+.movie-card:hover .card-img { transform: scale(1.3); }  /* imagei yaklaştırma */
+.movie-card .card-overlay {
+  position: absolute;
+  inset: 0; /* rigt top left bottom = 0 */
+  opacity:0;
+  backdrop-filter: blur(5px); /* arka plan blurlama*/
+}
+.movie-card:hover .card-overlay { opacity: 1; }
+.movie-card .rating {
+  position: absolute;
+  top: 15px;
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--light-azure);
+  transform: scale(var(--scale));
+  display:     flex;
+  align-items: center;
+  right: 15px;
+  background: var(--dark-blue-1);
+}
+.movie-card .bookmark {
+  position: absolute;
+  top: 15px;
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--light-azure);
+  transform: scale(var(--scale));
+  display:     flex;
+  align-items: center;
+  left: 15px;
+  background: var(--dark-blue-1);
+}
+.movie-card .bookmark span,
+.movie-card .rating span {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: var(--fw-5);
+  margin-left: 5px;
+}
+.movie-card ion-icon {
+  font-size: 16px;
+  display: block;
+  --ionicon-stroke-width: 50px;
+}
+.movie-card:hover :is(.rating) { --scale: 1; }
+.movie-card:hover :is(.bookmark) { --scale: 1; }
+.movie-card .card-title {
+  font-size: 17px;
+  font-weight: var(--fw-5);
+  margin-bottom: 5px;
+}
+.movie-card:hover .card-title { 
+  transition: all 0.5s !important;
+  color: var(--light-azure); 
+}
+.movie-card .card-info {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: var(--fw-5);
+  color: var(--white);
+}
+.movie-card .genre { margin-right: 10px; }
+/* load more */
+/* .load-more {
+  background: var(--dark-blue);
+  display: block;
+  padding: 20px 50px;
+  margin: auto;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-5);
+  border-radius: 15px;
+  color: var(--white);
+}
+.load-more:hover { background: var(--light-azure); } */
+/* Categroy */
+.category { margin-bottom: 60px;}
+/* .category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+} */
+.category-card {
+  position: relative;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.category-card::after {
+  /* content: ''; */
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(180deg, transparent 20%, #000a); */
+}
+.category-card .card-img{filter: grayscale(100%);}
+.category-card:hover .card-img { filter: none; transform: scale(1.1);}
+.category-card .name
+ {
+  position: absolute;
+  bottom: 20px;
+  color: var(--white);
+  z-index: 20;
+}
+.category-card .name {
+  left: 20px;
+  font-size: 20px;
+}
+/* .category-card:hover .name { color: var(--light-azure); } */
+/* Banner */
+.banner { margin-bottom: 60px; }
+.banner-card {
+  position: relative;
+  width: 1100px;
+  height: 400px;
+  overflow: hidden;
+  /* border-radius: 20px; */
+  cursor: pointer;
+}
+.side > img{
+  width: 260.91px;
+  height: 400px;
+  object-fit: cover;
+}
+.side{
+  margin-right: 25px;
+  float: left;
+}
+/* .banner-img { object-position: top; }
+.banner-card:hover .banner-img { transform: scale(1.1); } */
+.detail-image{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+/* .detail-image > img{
+  width: 30%;
+} */
+.detail-image > iframe {   
+  min-height: 350px; 
+  height: 100%;
+  width: 100%;
+
+}
+.card-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.card-info {
+  margin-top: 7px;
+  margin-left: 7px;
+  display:     flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+ .card-info{
+  display: block;
+ }
+}
+.card-info div {
+  display:     flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.card-info ion-icon {
+  font-size: 20px;
+  color: var(--azure);
+  margin-right: 5px;
+}
+.card-info span { font-weight: var(--fw-6); }
+.card-info .quality {
+  background: var(--azure);
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: var(--fw-7);
+}
+.card-title {
+  margin-left: 7px;
+  font-size: 3em;
+  color: var(--white);
+}
+.abstract{
+margin-top: 25px;
+}
+.abstract div{
+  margin-top: 15px;
+  font-weight: var(--fw-6);
+}
+#clicked{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: center;
+  width: 100%;
+  background-color: #ecb21f;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 13px; 
+}
+#post{
+  margin-top: 10px;
+  padding: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: var(--light-azure);
+  color: black;
+  border-radius: 13px;
+  width: 14rem;
+}
+.comments{
+  margin-top: 5%;
+  margin-left: 20px;
+}
+.comment{
+  background-color: var(--dark-black);
+  margin-bottom: 8px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  
+}
+.comment h4,.comment span{
+  display: inline;
+  
+}
+.comment p,.comment span{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(184, 183, 183);
+}
+.form-group input,.form-group textarea{
+  background-color: black;
+  border: 1px solid rgba(16, 46, 46, 1);
+  border-radius: 12px;
+}
+#algin-form{
+  margin-top: 20px;
+  background-color: var(--dark-black);
+  border-radius: 5px;
+  padding: 20px;
+}
+/* Toast */
+/* load more */
+.contens{
+  display: contents;
+}
+#limitBtn{
+  background-color: var(--azure);
+  padding: 5px 7px 5px 7px ;
+  border-radius: 7px;
+}

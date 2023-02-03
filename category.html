@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png">
+  <title>IMDB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="main-menu">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/100px-IMDB_Logo_2016.svg.png"
+            alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="category.html">Kategoriler</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <form action="/search.html" class="navbar-form" id="searchForm">
+                <input type="text" name="search" placeholder="" class="navbar-form-search" id="searchText">
+                <button type="submit" class="navbar-form-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="navbar-login nav-link"><span>Giriş Yap/Üye Ol
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                </svg></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar-End -->
+
+  <div class="container">
+
+    <h2 class="category-heading">Kategoriler</h2>
+      
+      <div class="row">
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Aksiyon">
+                <div class="category-card">
+                  <span class="check_btn"><i class="fas fa-check"></i></span>
+                  <img src="/images/X6DJje.webp" alt="" class="card-img">
+                  <div class="name">Aksiyon</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Komedi">
+                <div class="category-card">
+                  <img src="/images/11975606-728xauto.webp" alt="" class="card-img">
+                  <div class="name">Komedi</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Macera">
+                <div class="category-card">
+                  <img
+                    src="/images/skyscraper-dwayne-johnson-action-adventure-wallpaper-preview.jpg"
+                    alt="" class="card-img">
+                  <div class="name">Macera</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Animasyon">
+                <div class="category-card">
+                  <img
+                    src="/images/minions-comedy-movie-wallpaper-preview.jpg"
+                    alt="" class="card-img">
+                  <div class="name">Animasyon</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Bilim Kurgu">
+                <div class="category-card">
+                  <img src="/images/ender-s-game-science-fiction.jpg" alt=""
+                    class="card-img">
+                  <div class="name">Bilim Kurgu</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Romantik">
+                <div class="category-card">
+                  <img
+                    src="/images/s-44460c384e020cc5be3f356735ad12fb2acd1c63.webp"
+                    alt="" class="card-img">
+                  <div class="name">Romantik</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Dram">
+                <div class="category-card">
+                  <img
+                    src="/images/medium-athah-220-gsm-paper-wall-poster-13-19-inches-son-of-god-original-imaf9uurbbhhzykc.webp"
+                    alt="" class="card-img">
+                  <div class="name">Dram</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <a href="/selectCategory.html?name=Korku">
+                <div class="category-card">
+                  <img src="/images/41-419488_horror-movie-wallpaper-horror-movie-collage.jpg"
+                    alt="" class="card-img">
+                  <div class="name">Korku</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <form action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br><br>
+            <input type="submit" value="Submit">
+          </form> -->
+  </div>
+  <!-- Optional JavaScript -->
+  <script src="/script/app.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
